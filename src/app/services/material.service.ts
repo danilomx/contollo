@@ -17,7 +17,6 @@ export class MaterialService {
   materialDoc: AngularFirestoreDocument<Material>;
 
   constructor(public db: AngularFirestore) {
-    // this.material = this.db.collection('material').valueChanges();
     this.materialCollection = this.db.collection('material');
     this.material = this.materialCollection.snapshotChanges().pipe(
       map((actions) => {

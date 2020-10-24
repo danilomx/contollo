@@ -12,8 +12,7 @@ import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-material-administrar',
-  templateUrl: './material-administrar.component.html',
-  styleUrls: ['./material-administrar.component.css'],
+  templateUrl: './material-administrar.component.html'
 })
 export class MaterialAdministrarComponent implements OnInit {
   public formulario: FormGroup;
@@ -27,7 +26,7 @@ export class MaterialAdministrarComponent implements OnInit {
     private _form: FormBuilder,
     private _router: ActivatedRoute,
     private _routerLink: Router,
-    public materialService: MaterialService // private _location: Location
+    public materialService: MaterialService
   ) {
     this.formulario = this._form.group({
       nombre: [null, [Validators.required]],
